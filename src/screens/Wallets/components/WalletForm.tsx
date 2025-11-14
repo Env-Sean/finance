@@ -44,7 +44,7 @@ export const WalletForm: React.FC<WalletFormProps> = ({ onSuccess }) => {
   return (
     <form onSubmit={handleSubmit} className="space-y-4 max-w-md">
       <div>
-        <label className="block text-sm font-medium text-text-colortext-1 mb-2">
+        <label className="form-label">
           Wallet Name
         </label>
         <input
@@ -52,14 +52,14 @@ export const WalletForm: React.FC<WalletFormProps> = ({ onSuccess }) => {
           required
           value={formData.name}
           onChange={(e) => setFormData({ ...formData, name: e.target.value })}
-          className="w-full px-3 py-2 border border-graygray-3 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary-color"
+          className="form-input"
           placeholder="e.g., Savings, Checking"
         />
       </div>
 
       <div className="grid grid-cols-2 gap-4">
         <div>
-          <label className="block text-sm font-medium text-text-colortext-1 mb-2">
+          <label className="form-label">
             Initial Balance
           </label>
           <input
@@ -69,12 +69,12 @@ export const WalletForm: React.FC<WalletFormProps> = ({ onSuccess }) => {
             onChange={(e) =>
               setFormData({ ...formData, balance: e.target.value })
             }
-            className="w-full px-3 py-2 border border-graygray-3 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary-color"
+            className="form-input"
             placeholder="0.00"
           />
         </div>
         <div>
-          <label className="block text-sm font-medium text-text-colortext-1 mb-2">
+          <label className="form-label">
             Currency
           </label>
           <select
@@ -82,7 +82,7 @@ export const WalletForm: React.FC<WalletFormProps> = ({ onSuccess }) => {
             onChange={(e) =>
               setFormData({ ...formData, currency: e.target.value })
             }
-            className="w-full px-3 py-2 border border-graygray-3 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary-color"
+            className="form-input"
           >
             <option value="USD">USD</option>
             <option value="EUR">EUR</option>

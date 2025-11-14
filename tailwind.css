@@ -274,3 +274,121 @@
     font-feature-settings: "rlig" 1, "calt" 1;
   }
 }
+
+@layer components {
+  .status-badge-success {
+    @apply inline-flex items-center px-3 py-1 rounded-full text-xs font-medium;
+    background-color: #dcfce7;
+    color: #166534;
+  }
+
+  .status-badge-pending {
+    @apply inline-flex items-center px-3 py-1 rounded-full text-xs font-medium;
+    background-color: #dbeafe;
+    color: #1e40af;
+  }
+
+  .status-badge-warning {
+    @apply inline-flex items-center px-3 py-1 rounded-full text-xs font-medium;
+    background-color: #fef3c7;
+    color: #b45309;
+  }
+
+  .status-badge-error {
+    @apply inline-flex items-center px-3 py-1 rounded-full text-xs font-medium;
+    background-color: #fee2e2;
+    color: #991b1b;
+  }
+
+  .form-input {
+    @apply w-full px-3 py-2 border border-graygray-3 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary-color bg-white;
+  }
+
+  .form-label {
+    @apply block text-sm font-medium text-text-colortext-1 mb-2;
+  }
+
+  .form-card {
+    @apply p-6 bg-graygray-2 rounded-lg border border-graygray-3;
+  }
+
+  .stat-card {
+    @apply p-6 rounded-lg border;
+  }
+
+  .stat-card-success {
+    @apply p-6 rounded-lg border;
+    background-color: #f0fdf4;
+    border-color: #bbf7d0;
+  }
+
+  .stat-card-error {
+    @apply p-6 rounded-lg border;
+    background-color: #fef2f2;
+    border-color: #fecaca;
+  }
+
+  .stat-card-info {
+    @apply p-6 rounded-lg border;
+    background-color: #f0f9ff;
+    border-color: #bae6fd;
+  }
+
+  .stat-label {
+    @apply text-sm font-medium;
+  }
+
+  .stat-label-success {
+    @apply stat-label;
+    color: #16a34a;
+  }
+
+  .stat-label-error {
+    @apply stat-label;
+    color: #dc2626;
+  }
+
+  .stat-label-info {
+    @apply stat-label;
+    color: #2563eb;
+  }
+
+  .stat-value {
+    @apply text-3xl font-bold mt-2;
+  }
+
+  .stat-value-success {
+    @apply stat-value;
+    color: #15803d;
+  }
+
+  .stat-value-error {
+    @apply stat-value;
+    color: #b91c1c;
+  }
+
+  .stat-value-info {
+    @apply stat-value;
+    color: #1d4ed8;
+  }
+
+  .table-header {
+    @apply px-6 py-3 text-left text-sm font-semibold text-text-colortext-1;
+  }
+
+  .table-row {
+    @apply border-b border-graygray-3 hover:bg-graygray-2 transition;
+  }
+
+  .table-cell {
+    @apply px-6 py-4 text-sm text-text-colortext-1;
+  }
+
+  .transaction-income {
+    color: #16a34a;
+  }
+
+  .transaction-expense {
+    color: #dc2626;
+  }
+}

@@ -90,11 +90,11 @@ export const Wallets = (): JSX.Element => {
               </Button>
             </div>
 
-            <div className="p-6 bg-blue-50 rounded-lg border border-blue-200 mb-8">
-              <p className="text-sm text-blue-600 font-medium">
+            <div className="stat-card-info mb-8">
+              <p className="stat-label-info">
                 Total Balance
               </p>
-              <p className="text-3xl font-bold text-blue-700 mt-2">
+              <p className="stat-value-info">
                 ${totalBalance.toFixed(2)}
               </p>
             </div>

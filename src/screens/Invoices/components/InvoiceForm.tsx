@@ -88,7 +88,7 @@ export const InvoiceForm: React.FC<InvoiceFormProps> = ({ onSuccess }) => {
     <form onSubmit={handleSubmit} className="space-y-4">
       <div className="grid grid-cols-2 gap-4">
         <div>
-          <label className="block text-sm font-medium text-text-colortext-1 mb-2">
+          <label className="form-label">
             Invoice Number
           </label>
           <input
@@ -98,12 +98,12 @@ export const InvoiceForm: React.FC<InvoiceFormProps> = ({ onSuccess }) => {
             onChange={(e) =>
               setFormData({ ...formData, invoice_number: e.target.value })
             }
-            className="w-full px-3 py-2 border border-graygray-3 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary-color"
+            className="form-input"
             placeholder="INV-001"
           />
         </div>
         <div>
-          <label className="block text-sm font-medium text-text-colortext-1 mb-2">
+          <label className="form-label">
             Client Name
           </label>
           <input
@@ -113,14 +113,14 @@ export const InvoiceForm: React.FC<InvoiceFormProps> = ({ onSuccess }) => {
             onChange={(e) =>
               setFormData({ ...formData, client_name: e.target.value })
             }
-            className="w-full px-3 py-2 border border-graygray-3 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary-color"
+            className="form-input"
             placeholder="Client name"
           />
         </div>
       </div>
 
       <div>
-        <label className="block text-sm font-medium text-text-colortext-1 mb-2">
+        <label className="form-label">
           Client Email
         </label>
         <input
@@ -129,13 +129,13 @@ export const InvoiceForm: React.FC<InvoiceFormProps> = ({ onSuccess }) => {
           onChange={(e) =>
             setFormData({ ...formData, client_email: e.target.value })
           }
-          className="w-full px-3 py-2 border border-graygray-3 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary-color"
+          className="form-input"
           placeholder="client@example.com"
         />
       </div>
 
       <div>
-        <label className="block text-sm font-medium text-text-colortext-1 mb-2">
+        <label className="form-label">
           Description
         </label>
         <textarea
@@ -143,7 +143,7 @@ export const InvoiceForm: React.FC<InvoiceFormProps> = ({ onSuccess }) => {
           onChange={(e) =>
             setFormData({ ...formData, description: e.target.value })
           }
-          className="w-full px-3 py-2 border border-graygray-3 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary-color"
+          className="form-input"
           rows={3}
           placeholder="Invoice description"
         />
@@ -151,7 +151,7 @@ export const InvoiceForm: React.FC<InvoiceFormProps> = ({ onSuccess }) => {
 
       <div className="grid grid-cols-3 gap-4">
         <div>
-          <label className="block text-sm font-medium text-text-colortext-1 mb-2">
+          <label className="form-label">
             Amount
           </label>
           <input
@@ -162,12 +162,12 @@ export const InvoiceForm: React.FC<InvoiceFormProps> = ({ onSuccess }) => {
             onChange={(e) =>
               setFormData({ ...formData, amount: e.target.value })
             }
-            className="w-full px-3 py-2 border border-graygray-3 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary-color"
+            className="form-input"
             placeholder="0.00"
           />
         </div>
         <div>
-          <label className="block text-sm font-medium text-text-colortext-1 mb-2">
+          <label className="form-label">
             VAT Rate (%)
           </label>
           <input
@@ -177,12 +177,12 @@ export const InvoiceForm: React.FC<InvoiceFormProps> = ({ onSuccess }) => {
             onChange={(e) =>
               setFormData({ ...formData, vat_rate: e.target.value })
             }
-            className="w-full px-3 py-2 border border-graygray-3 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary-color"
+            className="form-input"
             placeholder="0"
           />
         </div>
         <div>
-          <label className="block text-sm font-medium text-text-colortext-1 mb-2">
+          <label className="form-label">
             Wallet
           </label>
           <select
@@ -190,7 +190,7 @@ export const InvoiceForm: React.FC<InvoiceFormProps> = ({ onSuccess }) => {
             onChange={(e) =>
               setFormData({ ...formData, wallet_id: e.target.value })
             }
-            className="w-full px-3 py-2 border border-graygray-3 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary-color"
+            className="form-input"
           >
             <option value="">Select wallet</option>
             {wallets.map((wallet) => (

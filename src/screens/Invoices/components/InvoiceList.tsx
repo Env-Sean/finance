@@ -23,13 +23,13 @@ interface InvoiceListProps {
 const getStatusColor = (status: string) => {
   switch (status) {
     case "paid":
-      return "bg-green-100 text-green-800";
+      return "status-badge-success";
     case "sent":
-      return "bg-blue-100 text-blue-800";
+      return "status-badge-pending";
     case "overdue":
-      return "bg-red-100 text-red-800";
+      return "status-badge-error";
     default:
-      return "bg-gray-100 text-gray-800";
+      return "status-badge-warning";
   }
 };
 
@@ -52,25 +52,25 @@ export const InvoiceList: React.FC<InvoiceListProps> = ({
       <table className="w-full">
         <thead>
           <tr className="border-b border-graygray-3 bg-graygray-2">
-            <th className="px-6 py-3 text-left text-sm font-semibold text-text-colortext-1">
+            <th className="table-header">
               Invoice #
             </th>
-            <th className="px-6 py-3 text-left text-sm font-semibold text-text-colortext-1">
+            <th className="table-header">
               Client
             </th>
-            <th className="px-6 py-3 text-right text-sm font-semibold text-text-colortext-1">
+            <th className="table-header text-right">
               Amount
             </th>
-            <th className="px-6 py-3 text-right text-sm font-semibold text-text-colortext-1">
+            <th className="table-header text-right">
               VAT
             </th>
-            <th className="px-6 py-3 text-right text-sm font-semibold text-text-colortext-1">
+            <th className="table-header text-right">
               Total
             </th>
-            <th className="px-6 py-3 text-left text-sm font-semibold text-text-colortext-1">
+            <th className="table-header">
               Status
             </th>
-            <th className="px-6 py-3 text-left text-sm font-semibold text-text-colortext-1">
+            <th className="table-header">
               Actions
             </th>
           </tr>
@@ -79,28 +79,26 @@ export const InvoiceList: React.FC<InvoiceListProps> = ({
           {invoices.map((invoice) => (
             <tr
               key={invoice.id}
-              className="border-b border-graygray-3 hover:bg-graygray-2 transition"
+              className="table-row"
             >
-              <td className="px-6 py-4 text-sm font-medium text-text-colortext-1">
+              <td className="table-cell font-medium">
                 {invoice.invoice_number}
               </td>
-              <td className="px-6 py-4 text-sm text-text-colortext-2">
+              <td className="table-cell text-text-colortext-2">
                 {invoice.client_name}
               </td>
-              <td className="px-6 py-4 text-sm text-right text-text-colortext-1">
+              <td className="table-cell text-right">
                 ${invoice.amount.toFixed(2)}
               </td>
-              <td className="px-6 py-4 text-sm text-right text-text-colortext-1">
+              <td className="table-cell text-right">
                 ${invoice.vat_amount.toFixed(2)}
               </td>
-              <td className="px-6 py-4 text-sm text-right font-semibold text-text-colortext-1">
+              <td className="table-cell text-right font-semibold">
                 ${invoice.total_amount.toFixed(2)}
               </td>
               <td className="px-6 py-4">
                 <span
-                  className={`inline-flex items-center px-3 py-1 rounded-full text-xs font-medium ${getStatusColor(
-                    invoice.status
-                  )}`}
+                  className={getStatusColor(invoice.status)}
                 >
                   {invoice.status.charAt(0).toUpperCase() +
                     invoice.status.slice(1)}

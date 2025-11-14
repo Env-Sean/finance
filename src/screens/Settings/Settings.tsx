@@ -31,7 +31,7 @@ export const Settings = (): JSX.Element => {
             </h1>
 
             <div className="space-y-6">
-              <div className="p-6 bg-graygray-2 rounded-lg border border-graygray-3">
+              <div className="form-card">
                 <h2 className="text-xl font-semibold text-text-colortext-1 mb-4">
                   Account Information
                 </h2>
@@ -59,7 +59,7 @@ export const Settings = (): JSX.Element => {
                 </div>
               </div>
 
-              <div className="p-6 bg-graygray-2 rounded-lg border border-graygray-3">
+              <div className="form-card">
                 <h2 className="text-xl font-semibold text-text-colortext-1 mb-4">
                   Preferences
                 </h2>
@@ -73,7 +73,7 @@ export const Settings = (): JSX.Element => {
                         Default currency for transactions
                       </p>
                     </div>
-                    <select className="px-3 py-2 border border-graygray-3 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary-color">
+                    <select className="form-input w-auto">
                       <option>USD</option>
                       <option>EUR</option>
                       <option>GBP</option>
@@ -95,13 +95,13 @@ export const Settings = (): JSX.Element => {
                       type="number"
                       step="0.01"
                       defaultValue="0"
-                      className="w-24 px-3 py-2 border border-graygray-3 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary-color"
+                      className="form-input w-24"
                     />
                   </div>
                 </div>
               </div>
 
-              <div className="p-6 bg-graygray-2 rounded-lg border border-graygray-3">
+              <div className="form-card">
                 <h2 className="text-xl font-semibold text-text-colortext-1 mb-4">
                   Danger Zone
                 </h2>

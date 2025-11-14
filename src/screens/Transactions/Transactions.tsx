@@ -84,15 +84,15 @@ export const Transactions = (): JSX.Element => {
             </div>
 
             <div className="grid grid-cols-2 gap-4 mb-8">
-              <div className="p-6 bg-green-50 rounded-lg border border-green-200">
-                <p className="text-sm text-green-600 font-medium">Total Income</p>
-                <p className="text-2xl font-bold text-green-700 mt-2">
+              <div className="stat-card-success">
+                <p className="stat-label-success">Total Income</p>
+                <p className="stat-value-success">
                   ${totalIncome.toFixed(2)}
                 </p>
               </div>
-              <div className="p-6 bg-red-50 rounded-lg border border-red-200">
-                <p className="text-sm text-red-600 font-medium">Total Expenses</p>
-                <p className="text-2xl font-bold text-red-700 mt-2">
+              <div className="stat-card-error">
+                <p className="stat-label-error">Total Expenses</p>
+                <p className="stat-value-error">
                   ${totalExpenses.toFixed(2)}
                 </p>
               </div>

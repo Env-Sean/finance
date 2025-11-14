@@ -41,25 +41,25 @@ export const TransactionList: React.FC<TransactionListProps> = ({
       <table className="w-full">
         <thead>
           <tr className="border-b border-graygray-3 bg-graygray-2">
-            <th className="px-6 py-3 text-left text-sm font-semibold text-text-colortext-1">
+            <th className="table-header">
               Date
             </th>
-            <th className="px-6 py-3 text-left text-sm font-semibold text-text-colortext-1">
+            <th className="table-header">
               Type
             </th>
-            <th className="px-6 py-3 text-left text-sm font-semibold text-text-colortext-1">
+            <th className="table-header">
               Category
             </th>
-            <th className="px-6 py-3 text-left text-sm font-semibold text-text-colortext-1">
+            <th className="table-header">
               Description
             </th>
-            <th className="px-6 py-3 text-left text-sm font-semibold text-text-colortext-1">
+            <th className="table-header">
               Reference
             </th>
-            <th className="px-6 py-3 text-right text-sm font-semibold text-text-colortext-1">
+            <th className="table-header text-right">
               Amount
             </th>
-            <th className="px-6 py-3 text-left text-sm font-semibold text-text-colortext-1">
+            <th className="table-header">
               Actions
             </th>
           </tr>
@@ -68,37 +68,33 @@ export const TransactionList: React.FC<TransactionListProps> = ({
           {transactions.map((transaction) => (
             <tr
               key={transaction.id}
-              className="border-b border-graygray-3 hover:bg-graygray-2 transition"
+              className="table-row"
             >
-              <td className="px-6 py-4 text-sm text-text-colortext-2">
+              <td className="table-cell text-text-colortext-2">
                 {formatDate(transaction.transaction_date)}
               </td>
               <td className="px-6 py-4 text-sm">
                 <span
-                  className={`inline-flex items-center px-3 py-1 rounded-full text-xs font-medium ${
-                    transaction.type === "income"
-                      ? "bg-green-100 text-green-800"
-                      : "bg-red-100 text-red-800"
-                  }`}
+                  className={transaction.type === "income" ? "status-badge-success" : "status-badge-error"}
                 >
                   {transaction.type.charAt(0).toUpperCase() +
                     transaction.type.slice(1)}
                 </span>
               </td>
-              <td className="px-6 py-4 text-sm text-text-colortext-1">
+              <td className="table-cell">
                 {transaction.category}
               </td>
-              <td className="px-6 py-4 text-sm text-text-colortext-2">
+              <td className="table-cell text-text-colortext-2">
                 {transaction.description}
               </td>
-              <td className="px-6 py-4 text-sm text-text-colortext-2">
+              <td className="table-cell text-text-colortext-2">
                 {transaction.reference}
               </td>
               <td
                 className={`px-6 py-4 text-sm font-semibold text-right ${
                   transaction.type === "income"
-                    ? "text-green-600"
-                    : "text-red-600"
+                    ? "transaction-income"
+                    : "transaction-expense"
                 }`}
               >
                 {transaction.type === "income" ? "+" : "-"}$

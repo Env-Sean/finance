@@ -58,7 +58,7 @@ export const Signup = (): JSX.Element => {
             )}
 
             <div className="space-y-2">
-              <label htmlFor="email" className="text-sm font-medium text-text-colortext-1">
+              <label htmlFor="email" className="form-label">
                 Email
               </label>
               <input
@@ -67,13 +67,13 @@ export const Signup = (): JSX.Element => {
                 value={email}
                 onChange={(e) => setEmail(e.target.value)}
                 required
-                className="w-full px-3 py-2 border border-graygray-5 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary-color"
+                className="form-input"
                 placeholder="Enter your email"
               />
             </div>
 
             <div className="space-y-2">
-              <label htmlFor="password" className="text-sm font-medium text-text-colortext-1">
+              <label htmlFor="password" className="form-label">
                 Password
               </label>
               <input
@@ -82,13 +82,13 @@ export const Signup = (): JSX.Element => {
                 value={password}
                 onChange={(e) => setPassword(e.target.value)}
                 required
-                className="w-full px-3 py-2 border border-graygray-5 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary-color"
+                className="form-input"
                 placeholder="Enter your password"
               />
             </div>
 
             <div className="space-y-2">
-              <label htmlFor="confirmPassword" className="text-sm font-medium text-text-colortext-1">
+              <label htmlFor="confirmPassword" className="form-label">
                 Confirm Password
               </label>
               <input
@@ -97,7 +97,7 @@ export const Signup = (): JSX.Element => {
                 value={confirmPassword}
                 onChange={(e) => setConfirmPassword(e.target.value)}
                 required
-                className="w-full px-3 py-2 border border-graygray-5 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary-color"
+                className="form-input"
                 placeholder="Confirm your password"
               />
             </div>

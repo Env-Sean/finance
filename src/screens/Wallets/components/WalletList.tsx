@@ -75,7 +75,7 @@ export const WalletList: React.FC<WalletListProps> = ({
                   step="0.01"
                   value={editBalance}
                   onChange={(e) => setEditBalance(e.target.value)}
-                  className="flex-1 px-3 py-2 border border-graygray-3 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary-color text-sm"
+                  className="flex-1 form-input text-sm"
                 />
                 <Button
                   onClick={() => handleSaveBalance(wallet.id)}

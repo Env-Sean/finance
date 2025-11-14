@@ -91,7 +91,7 @@ export const TransactionForm: React.FC<TransactionFormProps> = ({
     <form onSubmit={handleSubmit} className="space-y-4">
       <div className="grid grid-cols-2 gap-4">
         <div>
-          <label className="block text-sm font-medium text-text-colortext-1 mb-2">
+          <label className="form-label">
             Type
           </label>
           <select
@@ -99,14 +99,14 @@ export const TransactionForm: React.FC<TransactionFormProps> = ({
             onChange={(e) =>
               setFormData({ ...formData, type: e.target.value, category: "" })
             }
-            className="w-full px-3 py-2 border border-graygray-3 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary-color"
+            className="form-input"
           >
             <option value="income">Income</option>
             <option value="expense">Expense</option>
           </select>
         </div>
         <div>
-          <label className="block text-sm font-medium text-text-colortext-1 mb-2">
+          <label className="form-label">
             Category
           </label>
           <select
@@ -115,7 +115,7 @@ export const TransactionForm: React.FC<TransactionFormProps> = ({
             onChange={(e) =>
               setFormData({ ...formData, category: e.target.value })
             }
-            className="w-full px-3 py-2 border border-graygray-3 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary-color"
+            className="form-input"
           >
             <option value="">Select category</option>
             {currentCategories.map((cat) => (
@@ -129,7 +129,7 @@ export const TransactionForm: React.FC<TransactionFormProps> = ({
 
       <div className="grid grid-cols-2 gap-4">
         <div>
-          <label className="block text-sm font-medium text-text-colortext-1 mb-2">
+          <label className="form-label">
             Amount
           </label>
           <input
@@ -140,12 +140,12 @@ export const TransactionForm: React.FC<TransactionFormProps> = ({
             onChange={(e) =>
               setFormData({ ...formData, amount: e.target.value })
             }
-            className="w-full px-3 py-2 border border-graygray-3 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary-color"
+            className="form-input"
             placeholder="0.00"
           />
         </div>
         <div>
-          <label className="block text-sm font-medium text-text-colortext-1 mb-2">
+          <label className="form-label">
             Wallet
           </label>
           <select
@@ -153,7 +153,7 @@ export const TransactionForm: React.FC<TransactionFormProps> = ({
             onChange={(e) =>
               setFormData({ ...formData, wallet_id: e.target.value })
             }
-            className="w-full px-3 py-2 border border-graygray-3 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary-color"
+            className="form-input"
           >
             <option value="">Select wallet</option>
             {wallets.map((wallet) => (
@@ -166,7 +166,7 @@ export const TransactionForm: React.FC<TransactionFormProps> = ({
       </div>
 
       <div>
-        <label className="block text-sm font-medium text-text-colortext-1 mb-2">
+        <label className="form-label">
           Description
         </label>
         <input
@@ -175,13 +175,13 @@ export const TransactionForm: React.FC<TransactionFormProps> = ({
           onChange={(e) =>
             setFormData({ ...formData, description: e.target.value })
           }
-          className="w-full px-3 py-2 border border-graygray-3 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary-color"
+          className="form-input"
           placeholder="Transaction description"
         />
       </div>
 
       <div>
-        <label className="block text-sm font-medium text-text-colortext-1 mb-2">
+        <label className="form-label">
           Reference
         </label>
         <input
@@ -190,7 +190,7 @@ export const TransactionForm: React.FC<TransactionFormProps> = ({
           onChange={(e) =>
             setFormData({ ...formData, reference: e.target.value })
           }
-          className="w-full px-3 py-2 border border-graygray-3 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary-color"
+          className="form-input"
           placeholder="Reference number or ID"
         />
       </div>
